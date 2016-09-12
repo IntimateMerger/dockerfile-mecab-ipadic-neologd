@@ -18,5 +18,3 @@ deployment:
       - docker push intimatemerger/mecab-ipadic-neologd:onbuild
       - docker build -t intimatemerger/mecab-ipadic-neologd:${TAG-latest} .
       - docker push intimatemerger/mecab-ipadic-neologd:${TAG-latest}
-      - docker tag intimatemerger/mecab-ipadic-neologd:${TAG-latest} intimatemerger/mecab-ipadic-neologd:latest
-      - docker push intimatemerger/mecab-ipadic-neologd:latest
