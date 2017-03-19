@@ -1,5 +1,7 @@
 FROM intimatemerger/mecab-python:0.996-alpine
 
+LABEL maintainer "mats116 <mats.kazuki@gmail.com>"
+
 COPY mecabrc /usr/local/etc/mecabrc
 
 RUN apk add --no-cache --virtual=build-deps git bash curl file openssl sudo perl && \
