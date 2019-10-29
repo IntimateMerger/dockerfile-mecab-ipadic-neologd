@@ -30,3 +30,12 @@ jobs:
               docker login -u "$DOCKER_USER" -p "$DOCKER_PASS"
               docker push intimatemerger/mecab-ipadic-neologd:onbuild
             fi
+
+      - deploy:
+          name: Push to Docker Hub - onbuild3
+          command: |
+            if [ "${CIRCLE_BRANCH}" == "master" ]; then
+              docker build -t intimatemerger/mecab-ipadic-neologd:onbuild3 onbuild3
+              docker login -u "$DOCKER_USER" -p "$DOCKER_PASS"
+              docker push intimatemerger/mecab-ipadic-neologd:onbuild3
+            fi
